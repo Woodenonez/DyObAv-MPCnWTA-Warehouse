@@ -1,0 +1,26 @@
+---
+device: multi
+dim_out: 2
+dynamic_env: false
+fc_input: 3200
+input_channel: 7
+num_hypos: 20
+obsv_len: 5
+pred_len: 1
+---
+batch_size: 20
+checkpoint_dir: Model/
+early_stopping: 0
+epoch: 20
+learning_rate: 0.001
+weight_regularization: 0.0001
+---
+cell_width: 1
+x_max_px: 500
+y_max_px: 500
+---
+data_name: WSD_1t20_test
+data_path: data/WSD_1t20_test
+label_csv: all_data.csv
+label_path: data/WSD_1t20_test/all_data.csv
+model_path: Model/wsd_1t20

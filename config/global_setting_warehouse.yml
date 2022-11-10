@@ -1,0 +1,21 @@
+###
+SCENE:   warehouse
+MMP_CFG: wsd_1t20_test.yml
+MPC_CFG: mpc_default.yaml
+
+STIME:   0.2 # seconds
+PRED_OFFSET: 20
+
+SIM_WIDTH:  330
+SIM_HEIGHT: 293
+
+SCALE2NN:   1   # rescale to the neural network coords
+SCALE2REAL: 0.1 # rescale to the real-world coords
+
+IMAGE_AXIS: False # use image axis or Cartesian axis
+CORNER_COORDS: # offset in real world, if the corner is not (0,0)
+  - -15
+  - -15
+
+
+
