@@ -103,7 +103,7 @@ def plot_results(graph, ts, x_coords, y_coords, vel, omega, cost, start, end, an
 
 def plot_static_results(graph, ts, xx, xy, vel, omega, cost, start=None, end=None):
     fig = plt.figure(constrained_layout=True)
-    vel_ax, omega_ax, cost_ax, path_ax = prepare_plot(fig, graph)
+    vel_ax, omega_ax, cost_ax, path_ax, _ = prepare_plot(fig, graph)
     plot_action(vel_ax, vel, ts)
     plot_action(omega_ax, omega, ts)
     plot_action(cost_ax, cost, ts)

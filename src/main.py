@@ -5,7 +5,6 @@ import pathlib
 
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.patches as pth
 from matplotlib.gridspec import GridSpec
 from mpc_planner.util import utils_plot
 
