@@ -47,10 +47,10 @@ CONFIG_FN = 'mpc_default.yaml'
 # CONFIG_FN = 'mpc_hardcnst.yaml'
 # CONFIG_FN = 'mpc_softcnst.yaml'
 INIT_BUILD = False
-PLOT_INLOOP = False
+PLOT_INLOOP = True
 show_animation = False
 save_animation = False
-case_index = 3 # if None, give the hints
+case_index = None # if None, give the hints
 
 ### Load configuration
 yaml_fp = os.path.join(pathlib.Path(__file__).resolve().parents[1], 'config', CONFIG_FN)
