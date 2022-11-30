@@ -31,7 +31,8 @@ After this, a new directory *mpc_build* will appear and contains the solver. The
 Run *main.py* for the warehouse simulation (one robot, two pedestrians) in Python. Several cases are available in *test_block_mpc.py*. Motion prediction test is in *test_block_mmp.py*.
 
 ## ROS Simulation
-[ROS XXX](https://github.com/) [Not Yet]
+[ROS Noetic](https://github.com/Hadi-Hajieghrary/wta_mpc_ros_Simulation)
+To run the ROS simulation, download the above repository and first open a terminal to run the launch command in the ROS repo, then run the "main_ros.py" in this repo.
 
 
 
