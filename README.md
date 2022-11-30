@@ -11,6 +11,7 @@ not yet
 ![Example](doc/cover.png "Example")
 
 ## Quick Start
+You might find "doc/interface.pdf" useful!
 ### OpEn
 The NMPC formulation is solved using open source implementation of PANOC, namely [OpEn](https://alphaville.github.io/optimization-engine/). Follow the [installation instructions](https://alphaville.github.io/optimization-engine/docs/installation) before proceeding. 
 
