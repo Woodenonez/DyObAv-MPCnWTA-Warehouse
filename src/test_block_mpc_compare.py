@@ -45,7 +45,7 @@ CONFIG_FN1 = 'mpc_default.yaml'
 CONFIG_FN2 = 'mpc_hardcnst.yaml'
 CONFIG_FN3 = 'mpc_softcnst.yaml'
 # CONFIG_FN4 = 'mpc_fullcnst.yaml'
-case_index = 3 # if None, give the hints
+case_index = 2 # if None, give the hints
 LEGEND = ['Default', 'HC only', 'SC only']
 
 ### Load configuration

@@ -40,11 +40,13 @@ def prepare_plot(fig, graph, start=None, end=None, legend_style='single', double
         cost_ax = fig.add_subplot(gs[4:6, :2])
         cost_ax.set_xlabel('Time [s]', fontsize=15)
         cost_ax.set_ylabel('Cost', fontsize=15)
-        path_ax = fig.add_subplot(gs[3:, 2:])
+        path_ax = fig.add_subplot(gs[:3, 2:])
         path_ax.set_xlabel('X [m]', fontsize=15)
         path_ax.set_ylabel('Y [m]', fontsize=15)
         graph.plot_map(path_ax)
-        path_ax1 = fig.add_subplot(gs[:3, 2:]) # this is the "double" map
+        path_ax1 = fig.add_subplot(gs[3:, 2:]) # this is the "double" map
+        path_ax1.set_xlabel('Zoom-in', fontsize=15)
+        path_ax1.set_ylabel('Zoom-in', fontsize=15)
         graph.plot_map(path_ax1)
     else:
         vel_ax = fig.add_subplot(gs[0, :2])
@@ -66,12 +68,12 @@ def prepare_plot(fig, graph, start=None, end=None, legend_style='single', double
                         Line2D([0], [0], color='r', label='Original Obstacles'),
                         Line2D([0], [0], color='y', label='Padded Obstacles'),
                         Line2D([0], [0], marker='o', color='b', label='Generated Path', alpha=0.5),
-                        Line2D([0], [0], marker='*', color='g', label='Start Position', alpha=0.5),
-                        Line2D([0], [0], marker='*', color='r', label='End Position'),
+                        Line2D([0], [0], linewidth=0, marker='*', color='g', label='Start Position', alpha=0.5),
+                        Line2D([0], [0], linewidth=0, marker='*', color='r', label='End Position'),
                         ]
     else:
-        legend_elems = [Line2D([0], [0], marker='*', color='g', label='Start Position', alpha=0.5),
-                        Line2D([0], [0], marker='*', color='r', label='End Position'),
+        legend_elems = [Line2D([0], [0], linewidth=0, marker='*', color='g', label='Start Position', alpha=0.5),
+                        Line2D([0], [0], linewidth=0, marker='*', color='r', label='End Position'),
                         ]
         for c, l in zip(color_list, legend_list):
             legend_elems.append(Line2D([0], [0], marker='o', color=c, label=l, alpha=0.5),)
