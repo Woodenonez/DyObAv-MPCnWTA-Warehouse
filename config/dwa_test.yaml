@@ -1,0 +1,34 @@
+# This constitutes the default configuration file for the mpc-generator. 
+# Reference:  Trajectory Generation for Mobile Robots in a Dynamic Environment using Nonlinear Model Predictive Control. [CASE2021]
+################################################################################
+
+### System configuration
+ts: 0.2   # Size of the time-step (sampling time)
+
+### Robot Specification (physical shape)
+vehicle_width:  0.5  # Vehicle width in meters
+vehicle_margin: 0.2  # Vehicle extra safe margin
+social_margin: 0.2   # Vehicle extra social margin for soft loss terms
+### Robot Specification (kinematic parameters)
+lin_vel_min: -0.5    # Vehicle contraint on the minimal velocity possible
+lin_vel_max: 1.5     # Vehicle contraint on the maximal velocity possible
+lin_acc_min: -1      # Vehicle contraint on the maximal linear retardation
+lin_acc_max: 1       # Vehicle contraint on the maximal linear acceleration
+ang_vel_max: 0.5     # Vehicle contraint on the maximal angular velocity
+ang_acc_max: 3       # Vehicle contraint on the maximal angular acceleration (considered to be symmetric)
+
+### DWA configuration
+nu: 2     # Number of control inputs (speed and angular speed)
+ns: 3     # Number of states for the robot (x,y,theta)
+N_hor: 20               # The length of the searching horizon
+# vel_resolution: 0.05    # [m/s] The resolution of the velocity search space {Real}
+# ang_resolution: 0.04   # [rad/s] ~2 deg/s The resolution of the angular velocity search space {Real}
+vel_resolution: 0.1    # [m/s] The resolution of the velocity search space {Test}
+ang_resolution: 0.1   # [rad/s] ~5 deg/s The resolution of the angular velocity search space {Test}
+stuck_threshold: 0.001  # [m] The threshold for the robot to be considered stuck
+q_goal_dir: 0.05        # The cost for the goal direction deviation
+q_ref_deviation: 0.1    # The cost for the reference path deviation
+q_speed: 1.0            # The cost for the speed deviation
+q_stc_obstacle: 0.5     # The cost for the static obstacle collision
+q_dyn_obstacle: 0.8     # The cost for the dynamic obstacle collision
+q_social: 0.1           # The cost for the social collision

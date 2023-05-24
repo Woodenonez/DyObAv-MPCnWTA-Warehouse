@@ -1,6 +1,7 @@
 # Dir
 /archive
 /mpc_build
+/mpc_solver
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
