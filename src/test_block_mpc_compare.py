@@ -4,14 +4,14 @@ import pathlib
 
 import numpy as np
 
-from mpc_planner.util.config import Configurator
+from planner_mpc.util.config import Configurator
 
-from mpc_planner.path_advisor.global_path_plan import GloablPathPlanner
-from mpc_planner.path_advisor.local_path_plan import LocalPathPlanner
-from mpc_planner.trajectory_generator import TrajectoryGenerator
+from planner_mpc.path_advisor.global_path_plan import GloablPathPlanner
+from planner_mpc.path_advisor.local_path_plan import LocalPathPlanner
+from planner_mpc.trajectory_generator import TrajectoryGenerator
 
-from mpc_planner.scenario_simulator import Simulator
-from mpc_planner.util import utils_plot
+from planner_mpc.scenario_simulator import Simulator
+from planner_mpc.util import utils_plot
 from util.basic_objclass import *
 
 '''

@@ -49,6 +49,6 @@ ndynobs: 6   # Number of variables per dynamic obstacle
 
 # Building options in the optimizer
 build_type: 'release'          # Can have 'debug' or 'release'
-build_directory: 'mpc_build'   # Name of the directory where the build is created
+build_directory: 'mpc_solver'   # Name of the directory where the build is created
 bad_exit_codes: ["NotConvergedIterations", "NotConvergedOutOfTime"] # Optimizer specific names, otherwise "Converged"
 optimizer_name: 'navi_fullcnst'   # optimizer name

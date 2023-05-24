@@ -26,37 +26,37 @@ class Simulator:
 
     def load_map_and_obstacles(self, test_graph_index=11):
         if self.idx == 0:
-            from mpc_planner.test_maps.test_graphs import Graph
-            from mpc_planner.obstacle_scanner.test_dynamic_obstacles import ObstacleScanner
+            from planner_mpc.test_maps.test_graphs import Graph
+            from planner_mpc.obstacle_scanner.test_dynamic_obstacles import ObstacleScanner
             self.graph = Graph(inflate_margin=self.inflate_margin, index=test_graph_index)
             self.graph.processed_obstacle_list[3].pop(1) # XXX
             self.scanner = ObstacleScanner(self.graph)
             self.start = self.graph.start
             self.waypoints = [self.graph.end]
         elif self.idx == 1:
-            from mpc_planner.test_maps.mmc_graph import Graph
-            from mpc_planner.obstacle_scanner.mmc_dynamic_obstacles import ObstacleScanner
+            from planner_mpc.test_maps.mmc_graph import Graph
+            from planner_mpc.obstacle_scanner.mmc_dynamic_obstacles import ObstacleScanner
             self.start = (0.6, 3.5, math.radians(0))
             self.waypoints = [(15.4, 3.5, math.radians(0))]
             self.graph = Graph(inflate_margin=self.inflate_margin)
             self.scanner = ObstacleScanner()
         elif self.idx == 2:
-            from mpc_planner.test_maps.mmc_graph2 import Graph
-            from mpc_planner.obstacle_scanner.mmc_dynamic_obstacles2 import ObstacleScanner
+            from planner_mpc.test_maps.mmc_graph2 import Graph
+            from planner_mpc.obstacle_scanner.mmc_dynamic_obstacles2 import ObstacleScanner
             self.start = (7, 0.6, math.radians(90))
             self.waypoints = [(7, 11.5, math.radians(90)), (7, 15.4, math.radians(90))]
             self.graph = Graph(inflate_margin=self.inflate_margin)
             self.scanner = ObstacleScanner()
         elif self.idx == 3:
-            from mpc_planner.test_maps.mmc_graph import Graph
-            from mpc_planner.obstacle_scanner.crash_dynamic_obstacles import ObstacleScanner
+            from planner_mpc.test_maps.mmc_graph import Graph
+            from planner_mpc.obstacle_scanner.crash_dynamic_obstacles import ObstacleScanner
             self.start = (0.6, 3.5, math.radians(0))
             self.waypoints = [(15.4, 3.5, math.radians(0))]
             self.graph = Graph(inflate_margin=self.inflate_margin, with_stc_obs=False)
             self.scanner = ObstacleScanner()
         elif self.idx == 4:
-            from mpc_planner.test_maps.mmc_graph import Graph
-            from mpc_planner.obstacle_scanner.follow_dynamic_obstacles import ObstacleScanner
+            from planner_mpc.test_maps.mmc_graph import Graph
+            from planner_mpc.obstacle_scanner.follow_dynamic_obstacles import ObstacleScanner
             self.start = (0.6, 3.5, math.radians(0))
             self.waypoints = [(15.4, 3.5, math.radians(0))]
             self.graph = Graph(inflate_margin=self.inflate_margin, with_stc_obs=False)
