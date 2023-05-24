@@ -4,14 +4,14 @@ import pathlib
 
 import numpy as np
 
-from mpc_planner.util.config import Configurator
+from planner_mpc.util.config import Configurator
 
-from mpc_planner.path_advisor.global_path_plan import GloablPathPlanner
-from mpc_planner.path_advisor.local_path_plan import LocalPathPlanner
-from mpc_planner.trajectory_generator import TrajectoryGenerator
+from planner_mpc.path_advisor.global_path_plan import GloablPathPlanner
+from planner_mpc.path_advisor.local_path_plan import LocalPathPlanner
+from planner_mpc.trajectory_generator import TrajectoryGenerator
 
-from mpc_planner.scenario_simulator import Simulator
-from mpc_planner.util import utils_plot
+from planner_mpc.scenario_simulator import Simulator
+from planner_mpc.util import utils_plot
 from util.basic_objclass import *
 
 '''
@@ -47,10 +47,10 @@ CONFIG_FN = 'mpc_default.yaml'
 # CONFIG_FN = 'mpc_hardcnst.yaml'
 # CONFIG_FN = 'mpc_softcnst.yaml'
 INIT_BUILD = False
-PLOT_INLOOP = True
-show_animation = False
-save_animation = False
-case_index = None # if None, give the hints
+PLOT_INLOOP = False
+show_animation = True
+save_animation = True
+case_index = 3 # if None, give the hints
 
 ### Load configuration
 yaml_fp = os.path.join(pathlib.Path(__file__).resolve().parents[1], 'config', CONFIG_FN)
