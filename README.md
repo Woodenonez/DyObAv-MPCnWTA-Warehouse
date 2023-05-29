@@ -21,14 +21,14 @@ pip install -r requirements.txt
 ```
 
 ### Generate MPC solver
-Go to "test_block.py", change **INIT_BUILD** to true and run
+Go to "solver_build.py", use the proper configuration name **cfg_fname** and run
 ```
-python test_block_mpc.py
+python solver_build.py
 ```
-After this, a new directory *mpc_build* will appear and contains the solver. Then, you are good to go :)
+After this, a new directory *mpc_solver* will appear and contains the solver. Then, you are good to go :)
 
 ## Use Case
-Run *main.py* for the warehouse simulation (one robot, two pedestrians) in Python. Several cases are available in *test_block_mpc.py*. Motion prediction test is in *test_block_mmp.py*.
+Run *main.py* for the warehouse simulation (one robot, two pedestrians) in Python. The evaluation is in *main_eva.py*.
 
 ## ROS Simulation
 [ROS Noetic](https://github.com/Hadi-Hajieghrary/wta_mpc_ros_Simulation)
