@@ -42,8 +42,8 @@ qtheta: 0.0             # Cost for heading  deviation each time step to the refe
 qpN: 0.0                # Terminal cost; error relative to final reference position         
 qthetaN: 0.0            # Terminal cost; error relative to final reference heading     
 # Building options in the optimizer
-max_solver_time: 500_000        # micros (0.5 sec)
+max_solver_time: 100_000        # micros (0.1 sec)
 build_type: 'release'           # Can have 'debug' or 'release'
 build_directory: 'mpc_solver'   # Name of the directory where the build is created
 bad_exit_codes: ["NotConvergedIterations", "NotConvergedOutOfTime"] # Optimizer specific names, otherwise "Converged"
-optimizer_name: 'navi_default'     # optimizer name
+optimizer_name: 'navi_fast'    # optimizer name

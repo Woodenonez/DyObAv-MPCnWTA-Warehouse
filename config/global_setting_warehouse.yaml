@@ -1,0 +1,24 @@
+###
+scene:   warehouse
+map_dir: warehouse_sim_original
+map_file: mymap.pgm
+graph_file: mygraph.json
+
+mmp_cfg: wsd_1t20_test.yaml
+# mpc_cfg: mpc_default.yaml
+mpc_cfg: mpc_fast.yaml
+dwa_cfg: dwa_test.yaml
+
+sim_width:  330
+sim_height: 293
+
+scale2nn:   1   # rescale to the neural network coords
+scale2real: 0.1 # rescale to the real-world coords
+
+image_axis: False # use image axis or Cartesian axis
+corner_coords: # offset in real world, if the corner is not (0,0)
+  - -15
+  - -15
+
+
+
