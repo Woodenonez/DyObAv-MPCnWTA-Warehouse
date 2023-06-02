@@ -2,7 +2,7 @@
 To explore safer interactions between mobile robots and dynamic obstacles, this work presents a comprehensive approach to collision-free navigation in indoor environments. The proposed approach is an integration of multimodal motion predictions of dynamic obstacles and predictive control for obstacle avoidance. Motion prediction is achieved by a deep learning method that predicts plausible future positions. Model Predictive Control (MPC) solvers later generate a collision-free trajectory for the mobile robot.
 
 ## Publication
-The paper is available: [Not Yet] (Accepted by CASE2023) \
+The paper is available: [Not Yet]  \
 Bibtex citation:
 ```
 not yet
