@@ -14,8 +14,8 @@ def main(tracker_type, predictor_type, max_run_time_step=120):
 
 
 if __name__ == '__main__':
-    # main(tracker_type='mpc', predictor_type='mmp')
+    main(tracker_type='mpc', predictor_type='mmp')
     # main(tracker_type='mpc', predictor_type='kfmp') # XXX
     # main(tracker_type='mpc', predictor_type='cvmp')
-    main(tracker_type='dwa', predictor_type=None)
+    # main(tracker_type='dwa', predictor_type=None)
     # main(tracker_type='dwa', predictor_type='cvmp')

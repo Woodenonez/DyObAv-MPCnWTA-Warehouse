@@ -2,6 +2,8 @@
 /archive
 /mpc_build
 /mpc_solver
+/.vscode
+/.mypy_cache
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
