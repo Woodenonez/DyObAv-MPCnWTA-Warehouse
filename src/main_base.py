@@ -34,6 +34,15 @@ from typing import List, Tuple, Union
 
 ROOT_DIR = pathlib.Path(__file__).resolve().parents[1]
 
+
+def scenario_0():
+    human_starts = [np.array([160, 50])]  # XXX Sim world coords
+    human_paths = [[9, 32, 16]]
+
+    robot_start_point = np.array([235, 100, -math.pi/2]) # XXX Sim world coords
+    robot_path = [16, 32]
+    return human_starts, human_paths, robot_start_point, robot_path
+
 def scenario_1():
     human_starts = [np.array([110, 20])]  # XXX Sim world coords
     human_paths = [[1, 2, 9, 32]]
@@ -55,6 +64,8 @@ def scenario(index):
         return scenario_1()
     elif index == 2:
         return scenario_2()
+    elif index == 0:
+        return scenario_0()
     else:
         raise ValueError('Invalid scenario index: %d' % index)
 
@@ -65,7 +76,7 @@ class MainBase:
     HUMAN_VMAX = 1.5
     HUMAN_STAGGER = 0.5
 
-    SCENARIO_NUM = 1
+    SCENARIO_NUM = 0
     HUMAN_STARTS, HUMAN_PATHS, ROBOT_START_POINT, ROBOT_PATH = scenario(SCENARIO_NUM)
 
 
