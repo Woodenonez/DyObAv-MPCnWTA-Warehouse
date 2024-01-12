@@ -1,3 +1,4 @@
+import torch
 from main_base import MainBase
 
 def colored_print(r, g, b, text):
@@ -14,6 +15,7 @@ def main(tracker_type, predictor_type, max_run_time_step=120):
 
 
 if __name__ == '__main__':
+    print('GPU available:', torch.cuda.is_available())
     main(tracker_type='mpc', predictor_type='mmp')
     # main(tracker_type='mpc', predictor_type='kfmp') # XXX
     # main(tracker_type='mpc', predictor_type='cvmp')

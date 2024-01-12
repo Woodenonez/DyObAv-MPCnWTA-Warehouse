@@ -1,4 +1,4 @@
-# Dynamic Obstacle Avoidance: Iterative Predition (SWTA) and Control (MPC)
+# Dynamic Obstacle Avoidance: Iterative Prediction (SWTA) and Control (MPC)
 To explore safer interactions between mobile robots and dynamic obstacles, this work presents a comprehensive approach to collision-free navigation in indoor environments. The proposed approach is an integration of multimodal motion predictions of dynamic obstacles and predictive control for obstacle avoidance. Motion prediction is achieved by a deep learning method that predicts plausible future positions. Model Predictive Control (MPC) solvers later generate a collision-free trajectory for the mobile robot.
 
 ## Publication
@@ -33,7 +33,7 @@ Go to "solver_build.py", use the proper configuration name **cfg_fname** and run
 ```
 python solver_build.py
 ```
-After this, a new directory *mpc_solver* will appear and contains the solver. Then, you are good to go :)
+After this, a new directory *mpc_solver* will appear and contain the solver. Then, you are good to go :)
 
 ## Use Case
 Run *main.py* for the warehouse simulation (one robot, two pedestrians) in Python. The evaluation is in *main_eva.py*.
