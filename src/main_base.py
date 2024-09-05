@@ -270,6 +270,7 @@ class MainBase:
                      verbose:bool=False):
         """Run one step of simulation."""
 
+        mmp_start_time = timeit.default_timer()
         ### Motion prediction
         if predictor_interface is None:
             dyn_obs_list = [human.state.tolist() for human in human_list]
@@ -286,6 +287,8 @@ class MainBase:
             mu_list_list, std_list_list, hypos_clusters_list = self.run_wta_prediction(predictor_interface, human_list)
         else:
             raise ValueError('Predictor interface is not supported.')
+        mmp_solve_time = timeit.default_timer() - mmp_start_time
+        print('MMP solve time:', mmp_solve_time)
         
         if predictor_interface is not None:
             if isinstance(tracker_interface, MpcInterface):

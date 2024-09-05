@@ -24,4 +24,4 @@ if __name__ == "__main__":
     config_mpc = load_mpc_config(cfg_fname)
     config_robot = load_robot_spec(cfg_fname)
     mpc_module = mpc_builder.MpcModule(config_mpc, config_robot)
-    mpc_module.build(motion_model.unicycle_model)
+    mpc_module.build(motion_model.unicycle_model, test=False) # To try out build function without really building the solver
