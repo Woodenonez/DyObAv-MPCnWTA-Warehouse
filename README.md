@@ -41,6 +41,8 @@ Run *main.py* for the warehouse simulation (one robot, two pedestrians) in Pytho
 ## ROS Simulation
 [ROS Noetic](https://github.com/Hadi-Hajieghrary/wta_mpc_ros_Simulation)
 
+**Update: Go to the `ros_version` branch to run the ROS code**
+
 To run the ROS simulation, download the above repository and first open a terminal to run the launch command in the ROS repo, then run the "main_ros.py" in this repo.
 
 
