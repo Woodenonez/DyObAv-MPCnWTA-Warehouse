@@ -31,6 +31,8 @@ pip install -r requirements.txt
 ```
 
 ### Generate MPC solver
+Go to `test_block_mpc.py`, set `INIT_BUILD` to `True` and run the script. This will generate the MPC solver in the `mpc_build` directory. Note that this is for the `ros_version` branch. If you are looking at the `main` branch, follow the instructions below.
+
 Go to "solver_build.py", use the proper configuration name **cfg_fname** and run
 ```
 python solver_build.py

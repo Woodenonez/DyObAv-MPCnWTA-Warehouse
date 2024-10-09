@@ -417,7 +417,7 @@ class TrajectoryGenerator:
                     this_color = 'r'
                 if alpha > 0:
                     pos = (x,y)
-                    this_ellipse = patches.Ellipse(pos, rx, ry, angle/(2*math.pi)*360, color=this_color, alpha=max(8-al,1)/20, label='Obstacle')
+                    this_ellipse = patches.Ellipse(pos, rx, ry, angle=angle/(2*math.pi)*360, color=this_color, alpha=max(8-al,1)/20, label='Obstacle')
                     path_ax.add_patch(this_ellipse)
                     remove_later.append(this_ellipse)
                 current_one = False
